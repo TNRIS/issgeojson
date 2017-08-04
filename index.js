@@ -9,9 +9,9 @@ var ISS_API_URL = "http://api.wheretheiss.at/v1/satellites/25544";
 var collectDefaultMetrics = client.collectDefaultMetrics;
 collectDefaultMetrics({timeout: 5000});
 
-const requestCounter = new client.Counter({name: 'total_requests', help: 'Total Requests'});
-const successCounter = new client.Counter({name: 'successful_responses', help: 'Successful Responses'});
-const errorCounter = new client.Counter({name: 'error_responses', help: 'Error Responses'});
+const requestCounter = new client.Counter({name: 'issgeojson_total_requests', help: 'Total Requests to iss.tnris.org'});
+const successCounter = new client.Counter({name: 'issgeojson_successful_responses', help: 'Successful Responses from iss.tnris.org'});
+const errorCounter = new client.Counter({name: 'issgeojson_error_responses', help: 'Error Responses from iss.tnris.org'});
 
 var app = express();
 app.use(cors());
